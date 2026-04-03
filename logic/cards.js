@@ -22,6 +22,10 @@ function renderCards() {
             dari: "Ipeh"
         },
         {
+            pesan: "Wishing you both endless joy, love, and a lifetime of cherished memories.",
+            dari: "Olip"
+        },
+        {
             pesan: "Happy wedding!, semoga selalu harmonis dan bahagia",
             dari: "Arfan"
         },
@@ -40,7 +44,7 @@ function renderCards() {
         {
             pesan: "CIEEE UDAH JADI PASUTRI EAAA EAAA EAAA! semoga langgeng sampe tua luv",
             dari: "Andre"
-        },
+        }
     ];
 
     const wrapper = document.getElementById('cards-wrapper');
