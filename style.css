@@ -1,0 +1,226 @@
+body { font-family: 'Slackside One', cursive; }
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+
+    padding: 8px 25px 12px 25px; 
+    
+    border-radius: 12px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease-out;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+}
+
+.glass-button:active {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+.glass-button:active .group-active-scale{
+    transform:scale(1.3) rotate(16deg);
+}
+
+/* ANIMASI BUTTON */
+.anim-hover-component {
+    transform-origin: bottom center;
+    transition: transform 0.2s steps(1);
+}
+
+.group:hover ~ .absolute .anim-hover-component,
+.group:hover .anim-hover-component {
+     animation: tickEffectOnHover 0.8s steps(1) forwards;
+}
+
+@keyframes tickEffectOnHover {
+    0% { transform: rotate(-5deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.cards-scroll-container {
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.card-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.custom-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+/* Animasi transisi antar page */
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    background-color: #1a1a1a; 
+}
+
+#app-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #7F868E;
+}
+
+@media (max-width: 768px) {
+    .md\:max-w-\[450px\] {
+        max-width: 100% !important;
+        max-height: 100% !important;
+        border-radius: 0 !important;
+        box-shadow: none;
+    }
+}
+
+/* ANIMASI MENULIS KONTINU (LOOPING) */
+.hand-draw-anim {
+    clip-path: inset(0 100% 0 0); 
+    animation: humanWriteLoop 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes humanWriteLoop {
+    0% {
+        clip-path: inset(0 100% 0 -20%); 
+        opacity: 0;
+    }
+    50% {
+        clip-path: inset(0 0 0 -20%);
+        opacity: 1;
+    }
+    75% {
+        clip-path: inset(0 0 0 -20%);
+        opacity: 1;
+    }
+    100% {
+        clip-path: inset(0 0 0 -20%);
+        opacity: 0;
+    }
+}
+
+.anim-still {
+    animation: stillVibe 2s ease-in-out infinite;
+}
+
+@keyframes stillVibe {
+    0%, 100% { transform: rotate(-0.5deg) scale(1); }
+    50% { transform: rotate(0.5deg) scale(1.02); }
+}
+
+/* Animasi untuk Wchoo!! (Miring ke kanan) */
+.anim-wchoo {
+    animation: slideUpRight 1.5s ease-in-out infinite;
+}
+
+@keyframes slideUpRight {
+    0%, 100% {
+        transform: rotate(12deg) translate(0, 0);
+    }
+    50% {
+        /* Bergerak sedikit ke atas dan kanan sesuai sudutnya */
+        transform: rotate(12deg) translate(5px, -8px);
+    }
+}
+
+/* Animasi untuk Can't wait!! (Miring ke kiri) */
+.anim-cantwait {
+    animation: slideUpLeft 1.8s ease-in-out infinite; /* Beda durasi agar tidak seragam */
+}
+
+@keyframes slideUpLeft {
+    0%, 100% {
+        transform: rotate(-12deg) translate(0, 0);
+    }
+    50% {
+        /* Bergerak sedikit ke atas dan kiri sesuai sudutnya */
+        transform: rotate(-12deg) translate(-5px, -8px);
+    }
+}
+
+/* ========================================= */
+/* ANIMASI Meletus */
+/* ========================================= */
+
+.anim-launch-heart {
+    animation: launchHeart 2s steps(10) infinite; 
+}
+
+@keyframes launchHeart {
+    0% { transform: translateY(0); opacity: 1; }
+    40% { opacity: 1; }
+    50%, 100% { transform: translateY(-2px); opacity: 0; }
+}
+
+.anim-burst-spark {
+    bottom: -5px;
+    left: 50%;
+    animation: burstSpark 2s steps(5) infinite;
+}
+
+@keyframes burstSpark {
+0%, 49% { 
+        opacity: 0; 
+        /* Mulai di titik yang sama dengan hati menghilang (-10px) */
+        transform: translate(-50%, -2px) scale(0); 
+    }
+    50% { 
+        opacity: 1; 
+        transform: translate(-50%, -2px) scale(0.6); 
+    }
+    60% { 
+        /* Tetap di -10px tapi meledak */
+        transform: translate(-50%, -2px) scale(1.1) rotate(15deg); 
+        opacity: 1; 
+    }
+    75%, 100% { 
+        transform: translate(-50%, -2px) scale(1); 
+        opacity: 0; 
+    }
+}
+
+.anim-still {
+    animation: stillVibe 3s ease-in-out infinite;
+}
+
+@keyframes stillVibe {
+    0%, 100% { transform: rotate(-1deg) scale(1); }
+    50% { transform: rotate(1deg) scale(1.02); }
+}
