@@ -227,11 +227,17 @@ body {
 
 
 .min-h-screen-custom {
-    min-height: 100vh; /* Fallback */
-    min-height: 100dvh; /* Dynamic Viewport Height */
+    height: 100vh; /* Fallback */
+    height: 100dvh; /* Mengikuti tinggi layar HP yang sebenarnya */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Tambahkan padding aman di bawah untuk semua halaman */
-.safe-area-bottom {
-    padding-bottom: env(safe-area-inset-bottom, 24px); /* Support untuk poni bawah iPhone & Chrome */
+/* Hilangkan scrollbar default agar lebih bersih */
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.custom-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
