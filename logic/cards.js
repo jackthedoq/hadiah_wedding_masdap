@@ -26,7 +26,7 @@ function renderCards() {
             dari: "Olip"
         },
         {
-            pesan: "Happy wedding!, semoga selalu harmonis dan bahagia新婚快乐!! Semoga diberikan rejeki, kebahagiaan, living happily ever after, etc, dll mas & mbakk",
+            pesan: "新婚快乐!! Semoga diberikan rejeki, kebahagiaan, living happily ever after, etc, dll mas & mbakk",
             dari: "pandhu"
         },
         {
