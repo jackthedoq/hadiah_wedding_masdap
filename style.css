@@ -224,3 +224,14 @@ body {
     0%, 100% { transform: rotate(-1deg) scale(1); }
     50% { transform: rotate(1deg) scale(1.02); }
 }
+
+
+.min-h-screen-custom {
+    min-height: 100vh; /* Fallback */
+    min-height: 100dvh; /* Dynamic Viewport Height */
+}
+
+/* Tambahkan padding aman di bawah untuk semua halaman */
+.safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 24px); /* Support untuk poni bawah iPhone & Chrome */
+}
