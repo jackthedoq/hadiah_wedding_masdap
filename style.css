@@ -241,3 +241,8 @@ body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
+
+.h-screen-custom {
+    height: 100vh;
+    height: 100dvh;
+}
